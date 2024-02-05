@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.dev.sponsorship_app.controllers.CandidatController">
+   <children>
+      <AnchorPane layoutY="-8.0" prefHeight="509.0" prefWidth="823.0">
+         <children>
+            <VBox layoutX="-11.0" layoutY="385.0" prefHeight="124.0" prefWidth="188.0" style="-fx-background-color: #88888A;">
+               <children>
+                  <Button fx:id="logoutBtn" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#logout" prefHeight="0.0" prefWidth="187.0" style="-fx-background-color: #88888A;" text="Deconnexion">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="-13.0" prefHeight="388.0" prefWidth="190.0" style="-fx-background-color: #88888A;">
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="82.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/admin3.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="67.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Candidat">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="electeurTbl" layoutX="194.0" layoutY="87.0" prefHeight="316.0" prefWidth="430.0">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="75.0" text="#" />
+                  <TableColumn fx:id="nomCol" prefWidth="174.0" text="Nom Electeur" />
+                  <TableColumn fx:id="prenomCol" prefWidth="182.0" text="Prenom Electeur" />
+               </columns>
+            </TableView>
+            <Text layoutX="412.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes parrainages" wrappingWidth="324.13671875">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Text>
+            <Label layoutX="432.0" layoutY="426.0" prefHeight="36.0" prefWidth="63.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="dateTbl" layoutX="624.0" layoutY="87.0" prefHeight="316.0" prefWidth="113.0">
+              <columns>
+                <TableColumn fx:id="dateCol" prefWidth="111.0" text="Date Parrainage" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
